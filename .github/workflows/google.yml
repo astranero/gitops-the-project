@@ -7,7 +7,7 @@ on:
     tags:
     - "*"
   release:
-    types: ["created", published]
+    types: ["published","released","created"]
   delete: 
     branches:
     - "*"
