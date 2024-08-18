@@ -6,8 +6,8 @@ namePrefix: staging-
 
 images:
   - name: todo-backend
-    newName: ""
+    newTag: ""
   - name: todo-app
-    newName: ""
+    newTag: ""
   - name: todo-broadcaster
-    newName: ""
+    newTag: ""
