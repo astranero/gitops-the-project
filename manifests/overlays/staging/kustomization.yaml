@@ -5,9 +5,12 @@ resources:
 namePrefix: staging-
 
 images:
-  - name: todo-backend
-    newTag: ""
-  - name: todo-app
-    newTag: ""
-  - name: todo-broadcaster
-    newTag: ""
+- name: todo-app
+  newName: gcr.io/gke-dwe/todo-app
+  newTag: main-2a12a6f9df0f92505fcadf160bc5ff08d5ee777d
+- name: todo-backend
+  newName: gcr.io/gke-dwe/todo-backend
+  newTag: main-2a12a6f9df0f92505fcadf160bc5ff08d5ee777d
+- name: todo-broadcaster
+  newName: gcr.io/gke-dwe/todo-broadcaster
+  newTag: main-2a12a6f9df0f92505fcadf160bc5ff08d5ee777d
