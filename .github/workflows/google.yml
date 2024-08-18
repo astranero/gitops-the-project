@@ -6,6 +6,8 @@ on:
     - "main"
     tags:
     - "*"
+  release:
+    types: ["created", published]
   delete: 
     branches:
     - "*"
