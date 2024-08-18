@@ -1,10 +1,8 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"log"
-	"net/http"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -43,7 +41,7 @@ func main() {
 			return
 		}
 
-		log.Println("Message received from NC:\n %s", string(payloadByte)s)
+		log.Println("Message received from NC:\n %s", string(payloadBytes))
 	})
 
 	if err != nil {
