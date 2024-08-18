@@ -4,6 +4,7 @@ resources:
 - ./../../base
 - backup-configmap.yaml
 - backup.yaml
+- secret.yaml
 patches:
 - path: deployment.yaml
 
