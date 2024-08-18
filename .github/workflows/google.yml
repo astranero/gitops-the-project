@@ -143,32 +143,32 @@ jobs:
     - name: Build Backend Docker image
       run: |-
         docker build \
-          --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BACKEND_IMAGE }}:${{ env.BRANCH }} \
+          --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BACKEND_IMAGE }}:${{ env.BRANCH }}" \
           "./${{ env.BACKEND_IMAGE }}"
 
     - name: Build Broadcaster Docker image
       run: |-
         docker build \
-          --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BROADCASTER_IMAGE }}:${{ env.BRANCH }} \
+          --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BROADCASTER_IMAGE }}:${{ env.BRANCH }}" \
           "./${{ env.BROADCASTER_IMAGE }}"
   
     - name: Build Frontend Docker image
       run: |-
         docker build \
-          --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.FRONTEND_IMAGE }}:${{ env.BRANCH }} \
+          --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.FRONTEND_IMAGE }}:${{ env.BRANCH }}" \
           "./${{ env.FRONTEND_IMAGE }}"
 
     - name: Publish Backend Docker image
       run: |-
-        docker push "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BACKEND_IMAGE }}:${{ env.BRANCH }}
+        docker push "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BACKEND_IMAGE }}:${{ env.BRANCH }}"
 
     - name: Publish Broadcaster Docker image
       run: |-
-        docker push "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BROADCASTER_IMAGE }}:${{ env.BRANCH }}
+        docker push "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BROADCASTER_IMAGE }}:${{ env.BRANCH }}"
 
     - name: Publish Frontend Docker image
       run: |-
-        docker push "gcr.io/${{ env.GCP_PROJECT }}/${{ env.FRONTEND_IMAGE }}:${{ env.BRANCH }}
+        docker push "gcr.io/${{ env.GCP_PROJECT }}/${{ env.FRONTEND_IMAGE }}:${{ env.BRANCH }}"
       
     - name: Install Kustomize
       run: |-
