@@ -207,6 +207,7 @@ jobs:
 
     - name: Remove sensitive files
       run: |
+        rm -rf gha* 
         rm -f gha-creds-*.json
 
     - name: Commit changes
