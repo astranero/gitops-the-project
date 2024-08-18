@@ -54,19 +54,19 @@ jobs:
       run: |-
         docker build \
           --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BACKEND_IMAGE }}:${{ env.BRANCH }}-${{ github.sha }}" \
-          "./todo-project/${{ env.BACKEND_IMAGE }}"
+          "./${{ env.BACKEND_IMAGE }}"
 
     - name: Build Broadcaster Docker image
       run: |-
         docker build \
           --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BROADCASTER_IMAGE }}:${{ env.BRANCH }}-${{ github.sha }}" \
-          "./todo-project/${{ env.BROADCASTER_IMAGE }}"
+          "./${{ env.BROADCASTER_IMAGE }}"
   
     - name: Build Frontend Docker image
       run: |-
         docker build \
           --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.FRONTEND_IMAGE }}:${{ env.BRANCH }}-${{ github.sha }}" \
-          "./todo-project/${{ env.FRONTEND_IMAGE }}"
+          "./${{ env.FRONTEND_IMAGE }}"
   
     - name: Publish Backend Docker image
       run: |-
@@ -145,19 +145,19 @@ jobs:
       run: |-
         docker build \
           --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BACKEND_IMAGE }}:${{ env.BRANCH }}-${{ github.tag }}" \
-          "./todo-project/${{ env.BACKEND_IMAGE }}"
+          "./${{ env.BACKEND_IMAGE }}"
 
     - name: Build Broadcaster Docker image
       run: |-
         docker build \
           --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.BROADCASTER_IMAGE }}:${{ env.BRANCH }}-${{ github.tag }}" \
-          "./todo-project/${{ env.BROADCASTER_IMAGE }}"
+          "./${{ env.BROADCASTER_IMAGE }}"
   
     - name: Build Frontend Docker image
       run: |-
         docker build \
           --tag "gcr.io/${{ env.GCP_PROJECT }}/${{ env.FRONTEND_IMAGE }}:${{ env.BRANCH }}-${{ github.tag }}" \
-          "./todo-project/${{ env.FRONTEND_IMAGE }}"
+          "./${{ env.FRONTEND_IMAGE }}"
 
     - name: Publish Backend Docker image
       run: |-
