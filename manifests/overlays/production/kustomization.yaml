@@ -3,15 +3,18 @@ kind: Kustomization
 resources:
 - ./../../base
 - backup-configmap.yaml
-- backup.yaml 
+- backup.yaml
 patches:
-  - path: deployment.yaml
+- path: deployment.yaml
 
 namePrefix: production-
 images:
-  - name: todo-backend
-    newTag: ""
-  - name: todo-app
-    newTag: ""
-  - name: todo-broadcaster
-    newTag: ""
+- name: todo-app
+  newName: gcr.io/gke-dwe/todo-app
+  newTag: 1.0.8
+- name: todo-backend
+  newName: gcr.io/gke-dwe/todo-backend
+  newTag: 1.0.8
+- name: todo-broadcaster
+  newName: gcr.io/gke-dwe/todo-broadcaster
+  newTag: 1.0.8
