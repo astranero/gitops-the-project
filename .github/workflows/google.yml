@@ -111,12 +111,13 @@ jobs:
 
     - name: Commit changes
       run: |
-        git add .
+        git add -A
         git commit -m "Automated update by GitHub Actions [skip ci]"
       continue-on-error: true
 
     - name: Push changes
       run: |
+        git pull --rebase origin main
         git push origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -213,13 +214,13 @@ jobs:
 
     - name: Commit changes
       run: |
-        git pull origin main
-        git add .
+        git add -A
         git commit -m "Automated update by GitHub Actions [skip ci]"
       continue-on-error: true
 
     - name: Push changes
       run: |
+        git pull --rebase origin main
         git push origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
