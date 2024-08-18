@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -41,7 +43,28 @@ func main() {
 			return
 		}
 
-		log.Println("Message received from NC:\n %s", string(payloadBytes))
+		log.Println("Message from NC: \n %s", string(payloadBytes))
+
+		req, err := http.NewRequest("POST", discordURL, bytes.NewBuffer(payloadBytes))
+		if err != nil {
+			log.Printf("Error creating request: %v", err)
+		}
+
+		req.Header.Set("Content-Type", "application/json")
+
+		client := &http.Client{}
+		resp, err := client.Do(req)
+		if err != nil {
+			log.Printf("Error sending request to Discord: %v", err)
+		}
+		defer resp.Body.Close()
+
+		if resp.StatusCode != http.StatusOK {
+			log.Printf("Discord server error: %d", resp.StatusCode)
+		} else {
+			log.Println("Message successfully sent to Discord")
+		}
+
 	})
 
 	if err != nil {
