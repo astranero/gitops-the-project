@@ -5,5 +5,9 @@ resources:
 namePrefix: staging-
 
 images:
-  - name: PROJECT/IMAGE
+  - name: todo-backend
+    newName: ""
+  - name: todo-app
+    newName: ""
+  - name: todo-broadcaster
     newName: ""

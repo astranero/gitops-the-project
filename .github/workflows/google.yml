@@ -12,9 +12,7 @@ on:
 
 env:
   FRONTEND_IMAGE: todo-app
-  FRONTEND_SERVICE: todo-app
   BACKEND_IMAGE: todo-backend
-  BACKEND_SERVICE: todo-backend
   BROADCASTER_IMAGE: todo-broadcaster
   BRANCH: ${{ github.ref_name }}
   
