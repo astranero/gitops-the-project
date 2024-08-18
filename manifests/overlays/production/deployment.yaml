@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: todo
 spec:
+  selector:
+    matchLabels:
+      app: todo
+  template:
     spec:
       containers:
       - name: todo-broadcaster
