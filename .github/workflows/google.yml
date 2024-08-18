@@ -92,8 +92,8 @@ jobs:
     
     - name: Pull repository
       run: |
-        git pull origin main
-        git merge origin/main
+        git fetch origin
+        git checkout main
 
     - name: Deploy
       run: |-
@@ -194,8 +194,8 @@ jobs:
     
     - name: Pull repository
       run: |
-        git pull origin main
-        git merge origin/main
+        git fetch origin
+        git checkout main
 
     - name: Deploy
       run: |-
