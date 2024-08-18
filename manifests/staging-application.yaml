@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/astranero/gitops-the-project
-    path: overlays/staging
+    path: manifests/overlays/staging
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
