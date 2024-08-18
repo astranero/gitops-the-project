@@ -8,10 +8,10 @@ namePrefix: staging-
 images:
 - name: todo-app
   newName: gcr.io/gke-dwe/todo-app
-  newTag: main-85ada321256c5f75a9b7c6665d66c127a995099a
+  newTag: main-0ae5d0585af6cfd65d8833ed007c50e35fbcfd99
 - name: todo-backend
   newName: gcr.io/gke-dwe/todo-backend
-  newTag: main-85ada321256c5f75a9b7c6665d66c127a995099a
+  newTag: main-0ae5d0585af6cfd65d8833ed007c50e35fbcfd99
 - name: todo-broadcaster
   newName: gcr.io/gke-dwe/todo-broadcaster
-  newTag: main-85ada321256c5f75a9b7c6665d66c127a995099a
+  newTag: main-0ae5d0585af6cfd65d8833ed007c50e35fbcfd99
