@@ -12,10 +12,10 @@ namePrefix: production-
 images:
 - name: todo-app
   newName: gcr.io/gke-dwe/todo-app
-  newTag: 1.0.8
+  newTag: v1.0.9
 - name: todo-backend
   newName: gcr.io/gke-dwe/todo-backend
-  newTag: 1.0.8
+  newTag: v1.0.9
 - name: todo-broadcaster
   newName: gcr.io/gke-dwe/todo-broadcaster
-  newTag: 1.0.8
+  newTag: v1.0.9
